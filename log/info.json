@@ -1,0 +1,155 @@
+[
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 9,
+        "column": 4,
+        "before": "wx.getSetting",
+        "after": "swan.getSetting",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 12,
+        "column": 10,
+        "before": "wx.authorize",
+        "after": "swan.authorize",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 17,
+        "column": 10,
+        "before": "wx.authorize",
+        "after": "swan.authorize",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 25,
+        "column": 8,
+        "before": "wx.getUserInfo",
+        "after": "swan.getUserInfo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 27,
+        "column": 12,
+        "before": "wx.setStorage",
+        "after": "swan.setStorage",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 33,
+        "column": 8,
+        "before": "wx.request",
+        "after": "swan.request",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/app.js",
+        "row": 37,
+        "column": 12,
+        "before": "wx.setStorage",
+        "after": "swan.setStorage",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 47,
+        "column": 4,
+        "before": "wx.getSystemInfo",
+        "after": "swan.getSystemInfo",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 101,
+        "column": 63,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 111,
+        "column": 4,
+        "before": "wx.request",
+        "after": "swan.request",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 114,
+        "column": 37,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 114,
+        "column": 78,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 155,
+        "column": 47,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 164,
+        "column": 23,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 166,
+        "column": 8,
+        "before": "wx.uploadFile",
+        "after": "swan.uploadFile",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 171,
+        "column": 22,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    },
+    {
+        "type": "transform context",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 172,
+        "column": 24,
+        "before": "wx.getStorageSync",
+        "after": "swan.getStorageSync",
+        "message": "只转换了上下文, wx ==> swan"
+    }
+]

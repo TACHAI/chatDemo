@@ -1,0 +1,83 @@
+[
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 149,
+        "column": 4,
+        "before": "wx.startRecord({\n  success: function (res) {\n    clearInterval(interval);\n    var tempFilePath = res.tempFilePath;\n    seconds = seconds == 0 ? 1 : seconds;\n    let id = 'id_' + Date.parse(new Date()) / 1000;\n    let data = {\n      id: id,\n      me: true,\n      avatar: wx.getStorageSync('userInfo').avatarUrl,\n      speech: true,\n      seconds: seconds,\n      filePath: tempFilePath\n    };\n    let messages = that.data.messages;\n    messages.push(data);\n    that.setData({\n      messages: messages\n    });\n    that.setData({\n      toView: id\n    });\n    let nickName = wx.getStorageSync('userInfo').nickName;\n    if (!nickName) nickName = 'null';\n    wx.uploadFile({\n      url: host + '/wx/uploadSilk',\n      filePath: tempFilePath,\n      name: 'file',\n      formData: {\n        'userid': wx.getStorageSync('openid'),\n        'username': wx.getStorageSync('userInfo').nickName\n      },\n      success: function (res) {\n        let resData = JSON.parse(res.data);\n\n        if (resData.code == 102) {\n          let answer = resData.text;\n          let contents = util.getContents(answer);\n          let id = 'id_' + Date.parse(new Date()) / 1000;\n          let data = {\n            id: id,\n            contents: contents,\n            me: false,\n            avatar: '/images/robot.jpg',\n            speech: false\n          };\n          let messages = that.data.messages;\n          messages.push(data);\n          that.setData({\n            messages: messages\n          });\n          that.setData({\n            toView: id\n          });\n        } else if (resData.code == 101) {\n          var isFirst = true;\n          wx.playBackgroundAudio({\n            dataUrl: host + '/static/' + resData.text\n          });\n          wx.onBackgroundAudioPlay(function () {\n            wx.getBackgroundAudioPlayerState({\n              success: function (res) {\n                if (!isFirst) {\n                  return;\n                }\n\n                isFirst = false;\n                let duration = res.duration;\n                wx.stopBackgroundAudio();\n                let id = 'id_' + Date.parse(new Date()) / 1000;\n                let data = {\n                  id: id,\n                  me: false,\n                  avatar: '/images/robot.jpg',\n                  speech: true,\n                  seconds: duration == 0 ? 1 : duration,\n                  filePath: host + '/static/' + resData.text\n                };\n                let messages = that.data.messages;\n                messages.push(data);\n                that.setData({\n                  messages: messages\n                });\n                that.setData({\n                  toView: id\n                });\n              }\n            });\n          });\n        }\n      },\n      fail: function (err) {\n        console.log(err);\n      }\n    });\n  },\n  fail: function (err) {\n    console.log(err);\n  }\n})",
+        "after": "",
+        "message": "wx.startRecord:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 191,
+        "column": 14,
+        "before": "wx.playBackgroundAudio({\n  dataUrl: host + '/static/' + resData.text\n})",
+        "after": "",
+        "message": "wx.playBackgroundAudio:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 194,
+        "column": 14,
+        "before": "wx.onBackgroundAudioPlay(function () {\n  wx.getBackgroundAudioPlayerState({\n    success: function (res) {\n      if (!isFirst) {\n        return;\n      }\n\n      isFirst = false;\n      let duration = res.duration;\n      wx.stopBackgroundAudio();\n      let id = 'id_' + Date.parse(new Date()) / 1000;\n      let data = {\n        id: id,\n        me: false,\n        avatar: '/images/robot.jpg',\n        speech: true,\n        seconds: duration == 0 ? 1 : duration,\n        filePath: host + '/static/' + resData.text\n      };\n      let messages = that.data.messages;\n      messages.push(data);\n      that.setData({\n        messages: messages\n      });\n      that.setData({\n        toView: id\n      });\n    }\n  });\n})",
+        "after": "",
+        "message": "wx.onBackgroundAudioPlay:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 195,
+        "column": 16,
+        "before": "wx.getBackgroundAudioPlayerState({\n  success: function (res) {\n    if (!isFirst) {\n      return;\n    }\n\n    isFirst = false;\n    let duration = res.duration;\n    wx.stopBackgroundAudio();\n    let id = 'id_' + Date.parse(new Date()) / 1000;\n    let data = {\n      id: id,\n      me: false,\n      avatar: '/images/robot.jpg',\n      speech: true,\n      seconds: duration == 0 ? 1 : duration,\n      filePath: host + '/static/' + resData.text\n    };\n    let messages = that.data.messages;\n    messages.push(data);\n    that.setData({\n      messages: messages\n    });\n    that.setData({\n      toView: id\n    });\n  }\n})",
+        "after": "",
+        "message": "wx.getBackgroundAudioPlayerState:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 202,
+        "column": 20,
+        "before": "wx.stopBackgroundAudio()",
+        "after": "",
+        "message": "wx.stopBackgroundAudio:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 232,
+        "column": 4,
+        "before": "wx.stopRecord()",
+        "after": "",
+        "message": "wx.stopRecord:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 247,
+        "column": 4,
+        "before": "wx.playVoice({\n  filePath: filePath,\n  complete: function () {\n    clearInterval(interval);\n    that.setData({\n      speechIcon: '/images/speech0.png',\n      playingSpeech: ''\n    });\n  }\n})",
+        "after": "",
+        "message": "wx.playVoice:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 271,
+        "column": 4,
+        "before": "wx.playBackgroundAudio({\n  dataUrl: filePath\n})",
+        "after": "",
+        "message": "wx.playBackgroundAudio:没有相对应的函数"
+    },
+    {
+        "type": "delete api",
+        "file": "/Users/mac/Desktop/baidu/chatDemo/pages/index/index.js",
+        "row": 274,
+        "column": 4,
+        "before": "wx.onBackgroundAudioStop(function () {\n  clearInterval(interval);\n  that.setData({\n    speechIcon: '/images/speech0.png',\n    playingSpeech: ''\n  });\n})",
+        "after": "",
+        "message": "wx.onBackgroundAudioStop:没有相对应的函数"
+    }
+]
